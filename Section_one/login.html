@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .my_card {
+            border: 1px solid red;
+            width: 400px;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px 2px;
+            background-color: white;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+            background-image: linear-gradient(60deg, #d57d7d, #2f2f85), url('https://wallpaperaccess.com/full/521099.jpg');
+        }
+
+            .my_input {
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+                padding: 10px;
+
+            }
+
+            .mybtn {
+                width: 100%;
+                background-color: crimson;
+                color: white;
+                font-weight: bold;
+                padding: 10px;
+                margin-top: 30px;
+                border: none;
+                box-shadow: 1px, 3px, 10px, 2px;
+
+            }
+
+            .form_title {
+                font-family: Montserrat;
+                text-align: center;
+
+                * {
+                    font-family: Montserrat;
+                }
+            }
+    </style>
+</head>
+
+<body>
+    <div class="my_card">
+        <h1 class="form_title">Login Form</h1>
+        <form>
+            <label for="">Email</label>
+            <input class="my_input" type="email">
+
+            <label for="">Password</label>
+            <input class="my_input type=" password">
+
+            <button class="mybtn">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+
+    <style>
+        header {
+            background-image: linear-gradient(0deg, black, #0000007c),
+                url("https://img.etimg.com/thumb/msid-99669954,width-7046,height-3963,imgsize-1040534,overlay-economictimes/photo.jpg");
+            background-size: cover;
+            background-position: center;
+            padding: 300px 0;
+        }
+
+        p,
+        h3 {
+            font-family: Montserrat;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  bg-secondary opacity-1 fixed-top justify-content-evenly d-flex ">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white ml-9" href="#"><img
+                    src="https://www.boat-lifestyle.com/cdn/shop/files/boAt_logo_small.svg?v=1682421543"
+                    style="margin-left: 40px;" height="55px" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent ">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 mr-4">
+
+                    <li class="nav-item dropdown   ">
+                        <a style="font-family: Montserrat; font-weight: bold;"
+                            class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a </li>
+                    <li class="nav-item dropdown">
+                        <a style="font-family: Montserrat; font-weight: bold;"
+                            class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Daily Deals
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a style="font-family: Montserrat; font-weight: bold;" class="nav-link text-white" href="#">Gift
+                            With Boat </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a style="font-family: Montserrat; font-weight: bold;"
+                            class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            More
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex mx-4">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit"
+                        style="font-family: Montserrat;">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <header>
+        <div class="container text-center">
+            <p class="display-4 fw-bold text-white">Black Friday Sale</p>
+            <input type="text" class="form-control w-75 mx-auto" />
+            <button class="btn btn-warning mt-5">
+                <i class="fa-solid fa-magnifying-glass"></i> Search Item
+            </button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mt-4">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Lunar_Connect_Ace.jpg?v=1687342035"
+                        alt="" />
+                    <div class="card-body">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Lunar Connect Ace</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.2 Stars &
+                            <i class="fa-solid fa-user"></i> 5069 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹3999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/ADkick.png?v=1687954418" alt="" />
+                    <div class="card-body">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Airpodes</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.3 Stars &
+                            <i class="fa-solid fa-user"></i> 2947 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹1999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes-115_1.jpg?v=1686139410"
+                        alt="" />
+                    <div class="card-body">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Airdopes</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.6 Stars &
+                            <i class="fa-solid fa-user"></i> 3537 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4 ">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Ultima_Connect.jpg?v=1687865888"
+                        alt="" />
+                    <div class="card-body rounded-3">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Smart Watches</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.0 Stars &
+                            <i class="fa-solid fa-user"></i> 4345 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹4999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="mb-4">
+            <h4>Shop by <b>Categories</b></h4>
+        </div>
+        <div class="row justify-content-evenly ">
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/True-wireless-earbuds_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">wireless earbuds</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Neckbands_bc6343f4-622f-4ebd-bb36-205643c3bf78_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">NeckBand</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Smartwatches_88f12bcf-24bd-4e3a-aacb-ecc204f62179_small.png?v=1684842853"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">Smart Watches</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1 m-1">
+                    <p class="text-center fw-bold">HEadphones</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">Smart Watches</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1 ">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/True-wireless-earbuds_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div>
+                    <p class="text-center fw-bold"> True-wireless-earbuds_small</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Neckbands_bc6343f4-622f-4ebd-bb36-205643c3bf78_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">NeckBand</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Smartwatches_88f12bcf-24bd-4e3a-aacb-ecc204f62179_small.png?v=1684842853"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">Smart Watches</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">Headphones</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">Wirless Headphone</p>
+                </div>
+            </div>
+            <div class="col-md-1 m-1">
+                <div>
+                    <img src="https://www.boat-lifestyle.com/cdn/shop/files/Wireless-Headphones_small.png?v=1684842854"
+                        alt="">
+                </div>
+                <div class="m-1">
+                    <p class="text-center fw-bold">Smart Watches</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div>
+                <h4>New <b>Launches</b></h4>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Lunar_Connect_Ace.jpg?v=1687342035"
+                        alt="" />
+                    <div class="card-body">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Lunar Connect Ace</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.2 Stars &
+                            <i class="fa-solid fa-user"></i> 5069 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹3999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/ADkick.png?v=1687954418" alt="" />
+                    <div class="card-body">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Airpodes</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.3 Stars &
+                            <i class="fa-solid fa-user"></i> 2947 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹1999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Airdopes-115_1.jpg?v=1686139410"
+                        alt="" />
+                    <div class="card-body">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Airdopes</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.6 Stars &
+                            <i class="fa-solid fa-user"></i> 3537 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 mt-4 ">
+                <div class="card shadow-lg rounded-5">
+                    <img class="img-fluid rounded-5"
+                        src="https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Ultima_Connect.jpg?v=1687865888"
+                        alt="" />
+                    <div class="card-body rounded-3">
+                        <h4 class="text-muted">Boat</h4>
+                        <h3>Smart Watches</h3>
+                        <p class="mt-3">
+                            <i class="fa-solid fa-star text-warning"></i> 4.0 Stars &
+                            <i class="fa-solid fa-user"></i> 4345 Reviews
+                        </p>
+                        <h2 class="float-end mt-0">₹4999</h2>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary float-end">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container ">
+        <div class="row  justify-content-evenly   mt-5">
+            <div class="col-md-2 p-5 justify-content-evenly">
+                <div>
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334305_small.svg?v=1682336123" alt="">
+                </div>
+                <div>
+                    <p style="font-size: 17px;"><b>1 Year </b>warranty</p>
+                </div>
+            </div>
+            <div class="col-md-2 p-5 justify-content-evenly">
+                <div>
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334304_small.svg?v=1682336123" alt="">
+                </div>
+                <div>
+                    <p style="font-size: 17px;"><b>7 Days</b> Replacement</p>
+                </div>
+            </div>
+            <div class="col-md-2 p-5 justify-content-evenly">
+                <div>
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334303_small.svg?v=1682336123" alt="">
+                </div>
+                <div>
+                    <p style="font-size: 17px;"><b>Free</b> Shipping</p>
+                </div>
+            </div>
+            <div class="col-md-2 p-5  justify-content-evenly ">
+                <div>
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Group_334302_small.svg?v=1682336123" alt="">
+                </div>
+                <div>
+                    <p style="font-size: 17px;"><b>GST</b> Filling</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <h4>Shop By <b>Lifsty<u style="color: red;">le</u></b></h4>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div>
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Fitness_Freak_2.png?v=1685083745" alt="">
+                </div>
+                <div class="p-2" style="background-color: rgb(239, 236, 233);border-radius: 0px 0px 30px 30px;">
+                    <h3 class=" text-center m-1">For Fitness</h3>
+                    <p class="fw-bold text-center text-primary">View all <i class="fa-solid fa-circle-arrow-right"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div >
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Party_Animal_4.png?v=1685942349" alt="">
+                </div>
+                <div class="p-2" style="background-color: rgb(239, 236, 233); border-radius: 0px 0px 30px 30px;">
+                    <h3 class=" text-center m-1">For Work</h3>
+                    <p class="fw-bold text-center text-primary">View all <i class="fa-solid fa-circle-arrow-right"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Entertainment_2.png?v=1685083746" alt="">
+                </div>
+                <div class="p-2" style="background-color: rgb(239, 236, 233);border-radius: 0px 0px 30px 30px;">
+                    <h3 class=" text-center m-1">For Entertainment</h3>
+                    <p class="fw-bold text-center text-primary">View all <i class="fa-solid fa-circle-arrow-right"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3 rounded-5">
+                <div>
+                    <img class="img-fluid"
+                        src="https://www.boat-lifestyle.com/cdn/shop/files/Audiophile_3.png?v=1685942349" alt="">
+                </div>
+                <div class="p-2" style="background-color: rgb(239, 236, 233);border-radius: 0px 0px 30px 30px;">
+                    <h3 class=" text-center m-1">For Audiophiles</h3>
+                    <p class="fw-bold text-center text-primary"> View all <i class="fa-solid fa-circle-arrow-right"></i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div>
+            <h4>Best of <b>Bo<u style="color: red;">at</u></b></h4>
+        </div>
+        <div>
+            <a  style="background-color: antiquewhite; border-radius: 50%;" href="">Best All</a>
+            <a href="">Best All</a>
+            <a href="">Best All</a>
+            <a href="">Best All</a>
+        </div>
+       <div class="row">
+        
+       </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
