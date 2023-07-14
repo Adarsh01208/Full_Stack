@@ -1,3 +1,4 @@
+//java script started
 console.log('Hello JavaScript');
 num = 347;
 console.log(num);
@@ -7,6 +8,7 @@ islogggedin = false;
 console.log(typeof islogggedin);
 console.log(typeof num);
 
+//if else pgm 
 if (num % 2 == 0) {
     console.log('even');
 }
