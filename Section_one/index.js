@@ -1,4 +1,5 @@
 //java script started
+
 console.log('Hello JavaScript');
 num = 347;
 console.log(num);
