@@ -2,7 +2,8 @@
 import './App.css';
 import Home from './components/Home';
 import Login from './components/Login';
-import Signup from './components/Signup.';
+import Signin from './components/Signin';
+import Signup from './components/Signup';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
        <Home></Home>
        <Signup></Signup>
        <Login></Login>
+       <Signin></Signin>
     </div>
   );
 }
