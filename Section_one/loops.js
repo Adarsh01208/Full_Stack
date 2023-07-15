@@ -101,7 +101,7 @@ for (let i = 0; i < 10; i++) {
     no2 = c;
 }
 
-//wap for palindrome no
+//WAP to print Palindrome No for a given number
 let no = 2002;
 let rev = 0;
 let temp = no;
