@@ -10,7 +10,10 @@ export const EventHandling = () => {
         <button className='btn btn-primary mt-3' onClick={ ()=> { alert('button clicked') } } >Click Event</button>
 
         <h3>Change Event Handling</h3>
-        <input type="text" onChange={ ()=> {console.log('Something Change')  }} />
+        <input type="text" onChange={ (e)=> {console.log(e.target.value)  }} />
+
+        <h3>Change Page Background</h3>
+        <input type="color" onChange={ (e) => { document.body.style.backgroundColor=e.target.value } } />
 
 
     </div>
