@@ -5,6 +5,9 @@ import Login from './components/Login';
 import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Navbar from './components/Navbar';
+import EventHandling from './components/EventHandling';
+
+
 
 function App() {
   return (
@@ -25,6 +28,7 @@ function App() {
           <Route path='login' element={<Login />} />
           <Route path='signin' element={<Signin />} />
           <Route path='signup' element={<Signup />} />
+          <Route path='event' element={<EventHandling/>} />
         </Routes>
       </BrowserRouter>
     </div>
