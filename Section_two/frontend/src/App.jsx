@@ -6,6 +6,7 @@ import Signin from './components/Signin';
 import Signup from './components/Signup';
 import Navbar from './components/Navbar';
 import EventHandling from './components/EventHandling';
+import StateManagement from './components/StateManagement';
 
 
 
@@ -29,6 +30,7 @@ function App() {
           <Route path='signin' element={<Signin />} />
           <Route path='signup' element={<Signup />} />
           <Route path='event' element={<EventHandling/>} />
+          <Route path='statemanagement' element={<StateManagement/>} />
         </Routes>
       </BrowserRouter>
     </div>

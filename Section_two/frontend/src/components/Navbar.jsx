@@ -5,9 +5,9 @@ const Navbar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">
+                <NavLink className="navbar-brand" to="">
                     Navbar
-                </a>
+                </NavLink>
                 <button
                     className="navbar-toggler"
                     type="button"
@@ -22,28 +22,33 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink className="nav-link " to ="/home">
+                            <NavLink className="nav-link " to="/home">
                                 Home
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to ="/login">
+                            <NavLink className="nav-link" to="/login">
                                 Link
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to ="/signup">
+                            <NavLink className="nav-link" to="/signup">
                                 Signup
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to ="/signin">
+                            <NavLink className="nav-link" to="/signin">
                                 Signin
                             </NavLink>
                         </li>
                         <li className="nav-item">
-                            <NavLink className="nav-link" to ="/event">
+                            <NavLink className="nav-link" to="/event">
                                 Event Handling
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/statemanagement">
+                                State Management
                             </NavLink>
                         </li>
                         <li className="nav-item dropdown">
@@ -81,15 +86,12 @@ const Navbar = () => {
                         <li className="nav-item">
                             <a
                                 className="nav-link disabled"
-                                href="#"
-                                tabIndex={-1}
-                                aria-disabled="true"
                             >
                                 Disabled
                             </a>
                         </li>
                     </ul>
-                    <form className="d-flex">
+                    <form className="d-flex" role='search'>
                         <input
                             className="form-control me-2"
                             type="search"
