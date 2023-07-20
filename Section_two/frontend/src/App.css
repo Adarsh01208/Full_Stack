@@ -4,8 +4,8 @@
   font-weight: bold;
 }
 
-.active{
+.nav-item .active{
   font-weight: bold;
-  color: red !important;
-  border-bottom: 2px solid red;
+  color: white !important;
+  border-bottom: 2px solid rgb(231, 131, 131);
 }

@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom'
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light bg-info">
             <div className="container-fluid">
                 <NavLink className="navbar-brand" to="">
                     Navbar
@@ -22,7 +22,7 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <NavLink className="nav-link " to="/home">
+                            <NavLink className="nav-link  " to="/home">
                                 Home
                             </NavLink>
                         </li>
@@ -49,6 +49,11 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/statemanagement">
                                 State Management
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/todo">
+                                Todo List
                             </NavLink>
                         </li>
                         <li className="nav-item dropdown">

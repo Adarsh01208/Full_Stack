@@ -4,6 +4,8 @@ const StateManagement = () => {
 
     const [likes, setLikes] = useState(0);
 
+    // const [Dislikes, setDisLikes] = useState(0);
+
     const [imgUrl, setImgUrl] = useState('');
 
     
@@ -34,8 +36,10 @@ const StateManagement = () => {
                 <button onClick={() => { count++; console.log(count); }} > Add Count </button>
 
                 <h1>Likes : {likes} </h1>
-                <button className='btn btn-primary' onClick={() => { setLikes(likes + 1) }}> Add Likes</button>
-                <button className='btn btn-danger' onClick={() => { setLikes(likes - 1) }}> DisLikes</button>
+                {/* <h1>DisLikes : {Dislikes} </h1> */}
+                
+                <button className='btn btn-primary' onClick={() => { setLikes(likes + 1)}}> Add Likes</button>
+                <button className='btn btn-danger' onClick={() => { setLikes(likes - 1)}}> DisLikes</button>
             
                 <input type="file" onChange={selectFile} />
 
