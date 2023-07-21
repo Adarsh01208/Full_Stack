@@ -9,6 +9,9 @@ const Home = () => {
         <input type="text" />
         <br />
         <hr />
+   
+        
+        
     </div>
   )
 }
