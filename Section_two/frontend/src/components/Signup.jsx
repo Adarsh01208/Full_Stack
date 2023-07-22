@@ -28,9 +28,11 @@ const Signup = () => {
       },
       onSubmit: (values) => {
         console.log(values);
-      }
-    }
-  )
+      },
+      validationSchema: signupSchema
+    
+    });
+
   return (
     <div className="d-flex justify-content-center align-items-center  vh-100 ">
       <div className="card w-25 shadow-lg rounded-3   ">
@@ -40,12 +42,14 @@ const Signup = () => {
           <form onsubmit={signupForm.handleSubmit}>
             <label htmlFor="">Name</label>
             <input className="form-control mb-4 rounded-3" type="text" name="name" onChange={signupForm.handleChange} value={signupForm.values.name} />
+            <p>{signupForm.errors.name}</p>
             
             <label htmlFor="">Email</label>
             <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={signupForm.handleChange} value={signupForm.values.email} />
             <p>{signupForm.errors.email}</p>
             <label htmlFor="">Password</label>
             <input className="form-control mb-4 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
+            <p>{signupForm.errors.password}</p>
             <button className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
           </form>
         </div>

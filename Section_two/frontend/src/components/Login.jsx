@@ -41,7 +41,7 @@ const Login = () => {
             <p>{loginForm.errors.email}</p>
             <label htmlFor="">Password</label>
             <input className="form-control mb-4 rounded-3" type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
-            <p>{loginForm.errors.password}</p>
+           <span> <p >{loginForm.errors.password}</p></span>
             <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
           </form>
         </div>
