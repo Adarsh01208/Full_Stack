@@ -18,6 +18,7 @@ const Todo = () => {
         
     };
     const CompleteTodo = (index) => {
+        console.log(index);
         const temp = todolist;
         temp[index].completed = true;
         setTodoList([...temp]);
