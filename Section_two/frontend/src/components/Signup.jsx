@@ -49,7 +49,7 @@ const Signup = () => {
             <p>{signupForm.errors.email}</p>
             <label htmlFor="">Password</label>
             <input className="form-control mb-4 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
-            <p>{signupForm.errors.password}</p>
+            <div className='m-0 p-0'><p style={{fontSize:'10px'}}>{signupForm.errors.password}</p></div>
             <button className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
           </form>
         </div>
