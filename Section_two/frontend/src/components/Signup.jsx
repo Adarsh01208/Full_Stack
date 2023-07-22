@@ -43,7 +43,6 @@ const Signup = () => {
             <label htmlFor="">Name</label>
             <input className="form-control mb-4 rounded-3" type="text" name="name" onChange={signupForm.handleChange} value={signupForm.values.name} />
             <p>{signupForm.errors.name}</p>
-            
             <label htmlFor="">Email</label>
             <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={signupForm.handleChange} value={signupForm.values.email} />
             <p>{signupForm.errors.email}</p>
