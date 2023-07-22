@@ -30,7 +30,7 @@ const Signup = () => {
         console.log(values);
       },
       validationSchema: signupSchema
-    
+
     });
 
   return (
@@ -40,16 +40,24 @@ const Signup = () => {
           <i className="fa-solid fa-lock fa-3x d-block text-center " />
           <h1 className="text-center my-4  ">Signup Form</h1>
           <form onsubmit={signupForm.handleSubmit}>
-            <label htmlFor="">Name</label>
-            <input className="form-control mb-4 rounded-3" type="text" name="name" onChange={signupForm.handleChange} value={signupForm.values.name} />
-            <p>{signupForm.errors.name}</p>
-            <label htmlFor="">Email</label>
-            <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={signupForm.handleChange} value={signupForm.values.email} />
-            <p>{signupForm.errors.email}</p>
-            <label htmlFor="">Password</label>
-            <input className="form-control mb-4 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
-            <div className='m-0 p-0'><p style={{fontSize:'10px'}}>{signupForm.errors.password}</p></div>
-            <button className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
+            <div>
+              <label htmlFor="">Name</label>
+              <input className="form-control mb-4 rounded-3" type="text" name="name" onChange={signupForm.handleChange} value={signupForm.values.name} />
+              <p style={{ fontSize: '10px', marginTop: '0px' }}>{signupForm.errors.name}</p>
+            </div>
+            <div>
+              <label htmlFor="">Email</label>
+              <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={signupForm.handleChange} value={signupForm.values.email} />
+              <span> <p style={{ fontSize: '10px', marginTop: '0px' }}>{signupForm.errors.email}</p></span>
+            </div>
+            <div>
+              <label htmlFor="">Password</label>
+              <input className="form-control mb-4 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
+              <span className=' p-0'> <p style={{ fontSize: '10px', marginTop: '0px' }}>{signupForm.errors.password}</p> </span>
+            </div>
+             <div>
+             <button className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
+             </div>
           </form>
         </div>
       </div>

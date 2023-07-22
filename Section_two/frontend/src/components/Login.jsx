@@ -38,10 +38,10 @@ const Login = () => {
           <form onSubmit={loginForm.handleSubmit} >
             <label htmlFor="">Email</label>
             <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={loginForm.handleChange} value={loginForm.values.email} />
-            <p>{loginForm.errors.email}</p>
+            <p style={{ fontSize: '10px' }}>{loginForm.errors.email}</p>
             <label htmlFor="">Password</label>
             <input className="form-control mb-4 rounded-3" type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
-           <span> <p >{loginForm.errors.password}</p></span>
+            <span> <p style={{ fontSize: '10px' }} >{loginForm.errors.password}</p></span>
             <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
           </form>
         </div>
