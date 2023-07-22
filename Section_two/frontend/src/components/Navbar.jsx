@@ -61,7 +61,7 @@ const Navbar = () => {
                                 ChatApp
                             </NavLink>
                         </li>
-                        <li className="nav-item dropdown">
+                        {/* <li className="nav-item dropdown">
                             <a
                                 className="nav-link dropdown-toggle"
                                 href="#"
@@ -92,14 +92,7 @@ const Navbar = () => {
                                     </a>
                                 </li>
                             </ul>
-                        </li>
-                        <li className="nav-item">
-                            <a
-                                className="nav-link disabled"
-                            >
-                                Disabled
-                            </a>
-                        </li>
+                        </li> */}
                     </ul>
                     <form className="d-flex" role='search'>
                         <input

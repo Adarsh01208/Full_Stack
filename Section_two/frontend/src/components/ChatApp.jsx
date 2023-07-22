@@ -32,7 +32,7 @@ const ChatApp = () => {
      
     return (
         <div>
-            <h1 className='text-center display-4 fw-bold my-5'>Todo App</h1>
+            <h1 className='text-center display-4 fw-bold my-5'>Chat App</h1>
             <div className='container'>
                 <div className="card">
                     

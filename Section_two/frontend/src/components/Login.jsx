@@ -1,5 +1,5 @@
-import React from 'react'
-import { useFormik } from 'formik'
+import React from 'react';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const LoginSchema = Yup.object().shape({
@@ -9,21 +9,18 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
 
+  //initialix=zinf formik
   const loginForm = useFormik(
     {
-      intialValues: {
+      initialValues: {
         email: '',
         password: ''
       },
-      onsubmit: (values) => {
+      onSubmit: (values) => {
         console.log(values);
-      }
-    }
-  )
-
-
-
-
+      },
+      validationSchema: LoginSchema
+    });
 
   return (
     <div className="d-flex justify-content-center align-items-center  vh-100 ">
@@ -31,11 +28,12 @@ const Login = () => {
         <div className="card-body  p-5 ">
           <i className="fa-solid fa-lock fa-3x d-block text-center " />
           <h1 className="text-center my-4  ">Login Form</h1>
-          <form onsubmit={loginForm.handleSubmit} >
+          <form onSubmit={loginForm.handleSubmit} >
             <label htmlFor="">Email</label>
-            <input className="form-control mb-4 rounded-3" type="email" name="email" onchange={loginForm.handleChange} value={loginForm.Values.email} />
+            <p>{loginForm.errors.email}</p>
+            <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={loginForm.handleChange} value={loginForm.values.email} />
             <label htmlFor="">Password</label>
-            <input className="form-control mb-4 rounded-3" type=" password" name="password" onchange={loginForm.handleChange} value={loginForm.Values.password} />
+            <input className="form-control mb-4 rounded-3" type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
             <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
           </form>
         </div>
