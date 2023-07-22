@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
-const Todo = () => {
+const ChatApp = () => {
+
 
     const [todolist, setTodoList] = useState([]);
 
@@ -28,15 +29,13 @@ const Todo = () => {
         temp.splice(index, 1);
         setTodoList([...temp]);
     };
-
+     
     return (
         <div>
             <h1 className='text-center display-4 fw-bold my-5'>Todo App</h1>
             <div className='container'>
                 <div className="card">
-                    <div className="card-header">
-                        <input className='form-control' type="text" onKeyDown={addTodo} />
-                    </div>
+                    
                     <div className="card-body">
                         <ul className='list-group'>
                             {
@@ -52,12 +51,17 @@ const Todo = () => {
                         </ul>
 
                     </div>
+                    <div className="card-header">
+                        <input className='form-control' type="text" onKeyDown={addTodo} />
+                    </div>
+
                 </div>
 
             </div>
         </div >
+
+
     )
 }
 
-export default Todo
-
+export default ChatApp

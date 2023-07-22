@@ -28,7 +28,7 @@ const Navbar = () => {
                         </li>
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/login">
-                                Link
+                                Login
                             </NavLink>
                         </li>
                         <li className="nav-item">
@@ -54,6 +54,11 @@ const Navbar = () => {
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/todo">
                                 Todo List
+                            </NavLink>
+                        </li>
+                        <li className="nav-item">
+                            <NavLink className="nav-link" to="/chatapp">
+                                ChatApp
                             </NavLink>
                         </li>
                         <li className="nav-item dropdown">
