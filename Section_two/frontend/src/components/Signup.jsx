@@ -42,22 +42,25 @@ const Signup = () => {
           <form onsubmit={signupForm.handleSubmit}>
             <div>
               <label htmlFor="">Name</label>
+              <p className='error-label' >{signupForm.errors.name}</p>
               <input className="form-control mb-4 rounded-3" type="text" name="name" onChange={signupForm.handleChange} value={signupForm.values.name} />
-              <p style={{ fontSize: '10px', marginTop: '0px' }}>{signupForm.errors.name}</p>
+
             </div>
             <div>
               <label htmlFor="">Email</label>
+              <p className=' error-label '>{signupForm.errors.email}</p>
               <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={signupForm.handleChange} value={signupForm.values.email} />
-              <span> <p style={{ fontSize: '10px', marginTop: '0px' }}>{signupForm.errors.email}</p></span>
+
             </div>
             <div>
               <label htmlFor="">Password</label>
+              <p className=' error-label '>{signupForm.errors.password}</p>
               <input className="form-control mb-4 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
-              <span className=' p-0'> <p style={{ fontSize: '10px', marginTop: '0px' }}>{signupForm.errors.password}</p> </span>
+
             </div>
-             <div>
-             <button className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
-             </div>
+            <div>
+              <button type='submit' className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
+            </div>
           </form>
         </div>
       </div>
