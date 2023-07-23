@@ -10,6 +10,7 @@ import StateManagement from './components/StateManagement';
 import Todo from './components/Todo';
 import ChatApp from './components/ChatApp';
 import ContactUs from './components/ContactUs';
+import Browse from './components/Browse';
 
 
 
@@ -37,6 +38,7 @@ function App() {
           <Route path='todo' element={<Todo/>} />
           <Route path='chatapp' element={<ChatApp/>} />
           <Route path='contactus' element={<ContactUs/>} />
+          <Route path='browse' element={<Browse/>} />
         </Routes>
       </BrowserRouter>
     </div>

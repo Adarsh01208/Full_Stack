@@ -9,3 +9,14 @@
   color: white !important;
   border-bottom: 2px solid rgb(231, 131, 131);
 }
+
+.error-label{
+  color: red;
+  display: inline;
+  font-weight: bold;
+  font-size: 10px;
+  margin-left: 10px;
+
+
+  
+}

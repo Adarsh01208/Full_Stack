@@ -2,15 +2,13 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
+
 const LoginSchema = Yup.object().shape({
 
   email: Yup.string().email('Invalid email').required('Required'),
 
-  password: Yup.string().required('Please Enter your password')
-    .matches(
-      "^(?=.*[A-Za-z])(?=.*d)(?=.*[@$!%*#?&])[A-Za-zd@$!%*#?&]{8,}$",
-      "Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character"
-    )
+  password: Yup.string().required('Password is required')
+
 
 });
 
@@ -37,11 +35,13 @@ const Login = () => {
           <h1 className="text-center my-4  ">Login Form</h1>
           <form onSubmit={loginForm.handleSubmit} >
             <label htmlFor="">Email</label>
+            <p className='error-label '>{loginForm.errors.email}</p>
             <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={loginForm.handleChange} value={loginForm.values.email} />
-            <p style={{ fontSize: '10px' }}>{loginForm.errors.email}</p>
+
             <label htmlFor="">Password</label>
+            <p className='error-label ' >{loginForm.errors.password}</p>
             <input className="form-control mb-4 rounded-3" type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
-            <span> <p style={{ fontSize: '10px' }} >{loginForm.errors.password}</p></span>
+
             <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
           </form>
         </div>
