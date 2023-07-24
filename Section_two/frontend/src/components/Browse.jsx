@@ -18,13 +18,30 @@ const Browse = () => {
             </div>
         </div>))
     }
-    return (
-        <div>
-            <div className='container mt-5'>
-                <div className='row'>{displayLaptopData()} </div>
+
+    const filterLaptop = (e) => {
+        const value = e.target.value;
+        setLaptopList(laptopData.filter((laptop) => {
+            return laptop.title.toLowerCase().includes(value.toLowerCase())
+        })
+        );
+
+    };
+
+
+return (
+    <div>
+        <header className='bg-body-tertiory'>
+            <div className='container py-5'>
+                <p className='display-2 text-center fw-bold'>Browse Laptop</p>
+                <input type="text" className='form-control w-75 m-auto' onChange={filterLaptop} />
             </div>
+        </header>
+        <div className='container mt-5'>
+            <div className='row mt-5'>{displayLaptopData()} </div>
         </div>
-    )
+    </div>
+)
 }
 
 export default Browse;

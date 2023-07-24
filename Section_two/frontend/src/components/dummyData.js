@@ -17,7 +17,7 @@ const laptopData = [
     },
     {
         id: 84473,
-        title: 'ASUS Chromebook  i7 10th gen',
+        title: 'ASUS Chromebook i7 10th gen',
         price: 45000,
         reviews: 2930,
         rating: 4.1,

@@ -39,24 +39,21 @@ const Signup = () => {
         <div className="card-body  p-5 ">
           <i className="fa-solid fa-lock fa-3x d-block text-center " />
           <h1 className="text-center my-4  ">Signup Form</h1>
-          <form onsubmit={signupForm.handleSubmit}>
+          <form onSubmit={signupForm.handleSubmit}>
             <div>
               <label htmlFor="">Name</label>
-              <p className='error-label' >{signupForm.errors.name}</p>
+              <p className='error-label'>{signupForm.touched.name ? signupForm.errors.name : '' }</p>
               <input className="form-control mb-4 rounded-3" type="text" name="name" onChange={signupForm.handleChange} value={signupForm.values.name} />
-
             </div>
             <div>
               <label htmlFor="">Email</label>
-              <p className=' error-label '>{signupForm.errors.email}</p>
+              <p className='error-label'>{signupForm.touched.email ? signupForm.errors.email : '' }</p>
               <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={signupForm.handleChange} value={signupForm.values.email} />
-
             </div>
             <div>
               <label htmlFor="">Password</label>
-              <p className=' error-label '>{signupForm.errors.password}</p>
+              <p className='error-label'>{signupForm.touched.password ? signupForm.errors.password : '' }</p>
               <input className="form-control mb-4 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
-
             </div>
             <div>
               <button type='submit' className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+        rel="stylesheet" />
+
+    <style>
+        #from1 {
+            left: 100px;
+            right: 30px;
+        }
+
+        body {
+            background-color: rgb(245 245 245);
+            position: relative;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light  fixed p-1 shadow-sm bg-body">
+        <!-- Container wrapper -->
+        <div class="container">
+            <!-- Navbar brand -->
+            <a class="m-2" href="/" aria-label="DEV Community Home">
+                <img height="40px"
+                    src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png"
+                    alt="DEV Community">
+            </a>
+            <!-- Search form -->
+            <form class="input-group position-relative" style="width: 400px ">
+                <input type="search" class="form-control rounded-2 p-2" placeholder="Search..." aria-label="Search" />
+                <!-- <span style="right:10px; ; position: absolute;" class="m-1 p-0"> <i class="fa-solid fa-magnifying-glass m-2"></i></span> -->
+                <button style="right: 7px;  background-color: #00000000; border: 0px;"
+                    class="position-absolute justify-content-center my-2 p-1"><i
+                        class="fa-solid fa-magnifying-glass fs-5 "></i> </button>
+            </form>
+
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent ">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex p-2">
+                    <span class="m-2"> <a href="/enter" style="text-decoration: none; color: rgb(var(--grey-700));;"
+                            class="c-link c-link--block m-2 whitespace-nowrap ml-auto " data-no-instant="">
+                            Log in
+                        </a></span>
+                    <button class="btn btn-outline-primary fw-medium " type="button" data-mdb-ripple-color="dark"
+                        style="padding: .45rem 1.5rem .35rem;">
+                        Create Account
+                    </button>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <div class="container ">
+        <div class="row mt-4 ">
+            <div class="col-md-2 border bg-body p-4  m-0 rounded-2">
+                <div>
+                    <h5 class="fw-bold ">
+                        DEV Community is a community of 1,105,528 amazing developers
+                    </h5>
+                </div>
+                <div>
+                    <p class="text-secondary justify-content-evenly">
+                        We're a place where coders share, stay up-to-date and grow their careers.
+                        <p />
+                </div>
+                <div>
+                    <button class="btn btn-outline-primary fw-medium " type="button" data-mdb-ripple-color="dark"
+                        style="padding: .45rem 1.5rem .35rem;">
+                        Create Account
+                    </button>
+                </div>
+                <div class="text-center mt-3 mb-0">
+                    <span class="m-2"> <a href="/enter" style="text-decoration: none; color: rgb(var(--grey-700));;"
+                            class="c-link c-link--block m-2 whitespace-nowrap ml-auto " data-no-instant="">
+                            Log in
+                        </a></span>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="mb-2">
+                    <button class="btn btn-light fw-bold fs-5"> Relevant</button>
+                    <button class="btn btn-light text-muted  fs-5"> Latest</button>
+                    <button class="btn btn-light  text-muted fs-5"> Top</button>
+                </div>
+
+                <div class="border shadow-sm bg-body rounded-3 ">
+                    <div class="img-fluid   ">
+                        <img class="rounded-3" height="350px " width="100%"
+                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--IyHKLLTv--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/wxbipamauyg6viha6ot8.jpg"
+                            alt="">
+                    </div>
+                    <div class="p-4 d-flex">
+                        <img class="img-circle rounded-5" height="30px"
+                            src="https://res.cloudinary.com/practicaldev/image/fetch/s--k7uOWOtg--/c_fill,f_auto,fl_progressive,h_90,q_auto,w_90/https://dev-to-uploads.s3.amazonaws.com/uploads/user/profile_image/152613/f6aadb36-121c-409f-b746-e40e0408ea51.png"
+                            alt="">
+                        <p>Sm0ke</p> <br>
+                        <p>jul23</p>
+
+                    </div>
+                    <div class="m-0 p-0">
+                        <h3 class="fw-bold text-center ">Open-Source Site Builder - Simpllo</h3>
+                    </div>
+                    <div class="d-flex m-4 justify-content-evenly">
+                        <p>#pagebuilder</p>
+                        <p>websitebuilder</p>
+                        <p>devtool</p>
+                        <p>opensource</p>
+                    </div>
+                </div>
+                <div>
+
+                </div>
+
+            </div>
+            <div class="col-md-3">
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"
+        integrity="sha512-RX/OFugt/bkgwRQg4B22KYE79dQhwaPp2IZaA/YyU3GMo/qY7GrXkiG6Dvvwnds6/DefCfwPTgCXnaC6nAgVYw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</body>
+
+</html>
