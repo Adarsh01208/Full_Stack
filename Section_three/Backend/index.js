@@ -3,13 +3,16 @@ const express = require('express');
 
 //initialize express app
 
+
 const app=express();
 const port=5000;
+
 
 
 //import router
 const UserRouter=require('./routers/userRouter');
 const ProductRouter=require('./routers/productRouter');
+app.use(express.json());
 
 // middlewares 
 app.use('/user', UserRouter);

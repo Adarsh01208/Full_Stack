@@ -10,4 +10,6 @@ mongoose.connect(url)
     console.log(err);
 });
 
-console.log('do other stuff')
+//console.log('do other stuff')
+
+module.exports=mongoose;
