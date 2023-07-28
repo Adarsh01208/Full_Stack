@@ -6,6 +6,18 @@ const express = require('express');
 const app=express();
 const port=5000;
 
+
+//import router
+const UserRouter=require('./routers/userRouter');
+const ProductRouter=require('./routers/productRouter');
+
+// middlewares 
+app.use('/user', UserRouter);
+app.use('/product', ProductRouter);
+
+
+
+
 //creating routes
 app.get('/', (req, res) =>
 {
