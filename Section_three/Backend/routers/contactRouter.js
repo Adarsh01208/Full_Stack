@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const Model = require('../models/userModel')
+const Model=require('../models/contactModel')
 
 router.post('/add', (req, res) => {
     console.log(req.body);
@@ -14,26 +14,19 @@ router.post('/add', (req, res) => {
             res.status(500).json(err);
 
         });
-
-
 });
 
 //getall
 router.get('/getall', (req, res) => {
-
-    Model.find({})
-        .then((result) => {
-            res.json(result);
-
-        }).catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-
-    // res.send('response from product getall');
+    res.send('response from user getall');
 });
 
 //getid
+router.get('/getid', (req, res) => {
+    res.send('response from user getid');
+});
+
+
 //colon denotes url parameter
 router.get('/getid/:id', (req, res) => {
     console.log(req.params.id);
@@ -49,9 +42,9 @@ router.get('/getid/:id', (req, res) => {
 
 });
 
-router.get('/getbyemail/:email', (req,res)=>
+router.get('/getbyfirstName/:firstName', (req,res)=>
 {
-    Model.find({email: req.params.email})
+    Model.find({firstName: req.params.firstName})
     .then((result) => {
         res.json(result);
     }).catch((err) => {
