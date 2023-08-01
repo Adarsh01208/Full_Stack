@@ -1,11 +1,3 @@
-//title
-//description
-//price
-//category
-//image
-
-
-
 const { model, Schema } = require('../Connection');
 
 const myschema = new Schema({
@@ -15,9 +7,8 @@ const myschema = new Schema({
     price: Number,
     category: String,
     image: String
-    
-});
 
+});
 
 module.exports = model('product', myschema);
 
