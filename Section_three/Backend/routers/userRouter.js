@@ -40,24 +40,44 @@ router.get('/getid/:id', (req, res) => {
     // res.send('response from product getid');
     Model.findById(req.params.id)
 
-    .then((result) => {
-        res.json(result);
-    }).catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-    });
+        .then((result) => {
+            res.json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
 
 });
 
-router.get('/getbyemail/:email', (req,res)=>
-{
-    Model.find({email: req.params.email})
-    .then((result) => {
-        res.json(result);
-    }).catch((err) => {
-        console.log(err);
-        res.status(500).json(err);
-    });
-})
+router.get('/getbyemail/:email', (req, res) => {
+    Model.find({ email: req.params.email })
+        .then((result) => {
+            res.json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+router.delete('/delete/:id', (req, res) => {
+    Model.findByIdAndDelete(req.params.id)
+        .then((result) => {
+            res.json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
+router.put('/update/:id', (req, res) => {
+    Model.findByIdAndUpdate(req.params.id,req.body,{})
+        .then((result) => {
+            res.json(result);
+        }).catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
+
 
 module.exports = router;
