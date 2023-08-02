@@ -1,5 +1,8 @@
 //import express
 const express = require('express');
+const cors = require('cors');
+
+
 
 //initialize express app
 
@@ -13,6 +16,12 @@ const port = 5000;
 const UserRouter = require('./routers/userRouter');
 const ProductRouter = require('./routers/productRouter');
 const ContactRouter = require('./routers/contactRouter');
+const UtilRouter = require('./routers/util');
+
+//middleware to convert jason data to javascript object
+app.use(cors({
+    origin: ['http://localhost:3000']
+}))
 
 
 app.use(express.json());
@@ -21,6 +30,7 @@ app.use(express.json());
 app.use('/user', UserRouter);
 app.use('/product', ProductRouter);
 app.use('/contact', ContactRouter);
+app.use('/util', UtilRouter);
 
 
 
