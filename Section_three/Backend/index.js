@@ -32,9 +32,6 @@ app.use('/product', ProductRouter);
 app.use('/contact', ContactRouter);
 app.use('/util', UtilRouter);
 
-
-
-
 //creating routes
 app.get('/', (req, res) => {
     res.send('response from express server')
