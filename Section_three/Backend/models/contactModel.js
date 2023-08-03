@@ -6,7 +6,7 @@ const myschema = new Schema({
     firstName: String,
     lastName: String,
     country: String,
-    Description: String
+    description: String
 });
 
 module.exports = model('contact', myschema);
