@@ -14,7 +14,7 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
 
-  //initialix=zinf formik
+  //initialization formik
   const loginForm = useFormik(
     {
       initialValues: {
@@ -29,7 +29,7 @@ const Login = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center  vh-100 ">
-      <div className="card w-25 shadow-lg rounded-3   ">
+      <div className="card w-25 shadow-lg rounded-5   ">
         <div className="card-body  p-5 ">
           <i className="fa-solid fa-lock fa-3x d-block text-center " />
           <h1 className="text-center my-4  ">Login Form</h1>
