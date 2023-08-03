@@ -79,10 +79,10 @@ const Signup = () => {
 
   return (
     <div className="d-flex justify-content-center align-items-center  vh-100 ">
-      <div className="card w-25 shadow-lg rounded-3 py-2  ">
-        <div className="card-body  p-5 ">
+      <div className="card w-25 shadow-lg rounded-5  ">
+        <div className="card-body  p-5">
           <i className="fa-solid fa-lock fa-3x d-block text-center " />
-          <h1 className="text-center my-4 mt-0 ">Signup Form</h1>
+          <h1 className="text-center my-4">Signup Form</h1>
           <form onSubmit={signupForm.handleSubmit}>
             <div>
               <label htmlFor="">Name</label>
@@ -97,7 +97,7 @@ const Signup = () => {
             <div>
               <label htmlFor="">Password</label>
               <p className='error-label'>{signupForm.touched.password ? signupForm.errors.password : ''}</p>
-              <input className="form-control mb-4 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
+              <input className="form-control mb-0 rounded-3" type="password" name="password" onChange={signupForm.handleChange} value={signupForm.values.password} />
             </div>
 
             <div>
@@ -105,7 +105,7 @@ const Signup = () => {
               <input type="file" onChange={uploadFile} />
             </div>
             <div>
-              <button type='submit' className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
+              <button type='submit' className="btn btn-danger w-100 mt-4 rounded-3 ">Submit</button>
             </div>
           </form>
         </div>
