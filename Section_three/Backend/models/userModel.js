@@ -5,9 +5,11 @@ const myschema = new Schema({
     name: String,
     email: String,
     password: String,
-    age: Number
+    age: Number,
+    message:String
 
 });
 
 module.exports = model('users', myschema);
+
 
