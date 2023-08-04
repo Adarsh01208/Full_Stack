@@ -1,6 +1,7 @@
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import Swal from 'sweetalert2';
 
 
 const LoginSchema = Yup.object().shape({
@@ -24,7 +25,7 @@ const Login = () => {
       onSubmit:async (values) => {
         console.log(values);
 
-        const res = await fetch ('http://localhost:5000/util/authenicate',{
+        const res = await fetch ('http://localhost:5000/user/authenicate', {
           method: 'POST',
           body: JSON.stringify(values),
           headers: {
