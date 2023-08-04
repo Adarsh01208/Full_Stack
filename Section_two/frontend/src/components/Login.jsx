@@ -22,14 +22,14 @@ const Login = () => {
         email: '',
         password: ''
       },
-      onSubmit:async (values) => {
+      onSubmit: async (values) => {
         console.log(values);
 
-        const res = await fetch ('http://localhost:5000/user/authenicate', {
+        const res = await fetch('http://localhost:5000/user/authenicate', {
           method: 'POST',
           body: JSON.stringify(values),
           headers: {
-            'Content-Type':'application/json'
+            'Content-Type': 'application/json'
           }
         });
         console.log(res.status);
@@ -37,17 +37,17 @@ const Login = () => {
           Swal.fire({
             icon: 'success',
             title: 'Login Success',
-          
+
           });
         }
-        else  if (res.status === 401) {
+        else if (res.status === 401) {
           Swal.fire({
             icon: 'error',
             title: 'Login Failed',
             text: 'Email Nd Password is inCorrect'
           });
         }
-        else{
+        else {
           Swal.fire({
             icon: 'error',
             title: 'Something Went Wrong'
@@ -66,11 +66,11 @@ const Login = () => {
           <h1 className="text-center my-4  ">Login Form</h1>
           <form onSubmit={loginForm.handleSubmit} >
             <label htmlFor="">Email</label>
-            <p className='error-label '>{loginForm.touched.email ? loginForm.errors.email : '' }</p>
+            <p className='error-label '>{loginForm.touched.email ? loginForm.errors.email : ''}</p>
             <input className="form-control mb-4 rounded-3" type="email" name="email" onChange={loginForm.handleChange} value={loginForm.values.email} />
 
             <label htmlFor="">Password</label>
-            <p className='error-label ' >{loginForm.touched.password ? loginForm.errors.password : ''  }</p>
+            <p className='error-label ' >{loginForm.touched.password ? loginForm.errors.password : ''}</p>
             <input className="form-control mb-4 rounded-3" type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
 
             <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
