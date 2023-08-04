@@ -21,8 +21,38 @@ const Login = () => {
         email: '',
         password: ''
       },
-      onSubmit: (values) => {
+      onSubmit:async (values) => {
         console.log(values);
+
+        const res = await fetch ('http://localhost:5000/util/authenicate',{
+          method: 'POST',
+          body: JSON.stringify(values),
+          headers: {
+            'Content-Type':'application/json'
+          }
+        });
+        console.log(res.status);
+        if (res.status === 200) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Login Success',
+          
+          });
+        }
+        else  if (res.status === 401) {
+          Swal.fire({
+            icon: 'error',
+            title: 'Login Failed',
+            text: 'Email Nd Password is inCorrect'
+          });
+        }
+        else{
+          Swal.fire({
+            icon: 'error',
+            title: 'Something Went Wrong'
+          });
+        }
+
       },
       validationSchema: LoginSchema
     });
