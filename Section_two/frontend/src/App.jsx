@@ -10,13 +10,15 @@ import Todo from './components/Todo';
 import ChatApp from './components/ChatApp';
 import ContactUs from './components/ContactUs';
 import Browse from './components/Browse';
+import ManageUser from './components/ManageUser';
+import { Toaster } from 'react-hot-toast';
 
 
 
 function App() {
   return (
     <div>
-
+      <Toaster position= 'top-center' />
 
       <BrowserRouter>
         {/* <Link to="/home">Home Page</Link>
@@ -37,6 +39,7 @@ function App() {
           <Route path='chatapp' element={<ChatApp/>} />
           <Route path='contactus' element={<ContactUs/>} />
           <Route path='browse' element={<Browse/>} />
+          <Route path='manageuser' element={<ManageUser/>} />
         </Routes>
       </BrowserRouter>
     </div>
