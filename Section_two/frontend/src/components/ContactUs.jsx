@@ -14,30 +14,30 @@ const ContactUs = () => {
       onSubmit: async (values) => {
         console.log(values);
         //sending request  to backend   //required="" defaultValue={""}
-       const res= await fetch('http://localhost:5000/user/add', {
+        const res = await fetch('http://localhost:5000/user/add', {
           method: 'POST',
           body: JSON.stringify(values),
           headers: {
             'Content-Type': 'application/json'
           }
         });
-          console.log(res.status)
+        console.log(res.status)
 
-          if (res.status === 200) {
-            Swal.fire({
-              icon: 'success',
-              title: 'Thank You',
-              text: 'Team Will Contact U Shortly'
-            });
-          
-          }
-          else {
-            Swal.fire({
-              icon: 'error',
-              title: 'Oops!!',
-              text: 'Some Error Occured'
-            });
-          }
+        if (res.status === 200) {
+          Swal.fire({
+            icon: 'success',
+            title: 'Thank You',
+            text: 'Team Will Contact U Shortly'
+          });
+
+        }
+        else {
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops!!',
+            text: 'Some Error Occured'
+          });
+        }
       }
     });
 
@@ -60,7 +60,7 @@ const ContactUs = () => {
               <label htmlFor="">Message</label>
               <textarea className="form-control mb-4 rounded-3" rows={3} cols={30} type="String" name="message" onChange={contactForm.handleChange} value={contactForm.values.message} />
             </div>
-          
+
             <div>
               <button type='submit' className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
             </div>
