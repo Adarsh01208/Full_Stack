@@ -22,7 +22,7 @@ const Login = () => {
         email: '',
         password: ''
       },
-      onSubmit: async (values) => {
+      onSubmit: async (values, action) => {
         console.log(values);
 
         const res = await fetch('http://localhost:5000/user/authenicate', {
@@ -33,12 +33,18 @@ const Login = () => {
           }
         });
         console.log(res.status);
+        action.resetForm();
+
         if (res.status === 200) {
           Swal.fire({
             icon: 'success',
             title: 'Login Success',
 
           });
+
+          const data = await res.json();
+          sessionStorage.setItem('user', JSON.stringify(data));
+
         }
         else if (res.status === 401) {
           Swal.fire({
@@ -73,7 +79,7 @@ const Login = () => {
             <p className='error-label ' >{loginForm.touched.password ? loginForm.errors.password : ''}</p>
             <input className="form-control mb-4 rounded-3" type=" password" name="password" onChange={loginForm.handleChange} value={loginForm.values.password} />
 
-            <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Submit</button>
+            <button type="submit" className="btn btn-danger w-100 mt-2 rounded-3 ">Login</button>
           </form>
         </div>
       </div>
