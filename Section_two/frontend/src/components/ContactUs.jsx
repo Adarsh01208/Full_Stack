@@ -11,8 +11,9 @@ const ContactUs = () => {
         email: '',
         message: ''
       },
-      onSubmit: async (values) => {
+      onSubmit: async (values, action) => {
         console.log(values);
+
         //sending request  to backend   //required="" defaultValue={""}
         const res = await fetch('http://localhost:5000/user/add', {
           method: 'POST',
@@ -22,7 +23,8 @@ const ContactUs = () => {
           }
         });
         console.log(res.status)
-
+        action.resetForm();
+        
         if (res.status === 200) {
           Swal.fire({
             icon: 'success',
