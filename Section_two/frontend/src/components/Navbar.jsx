@@ -1,7 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
+import useUserContext from '../UserContext'
 
 const Navbar = () => {
+
+    const { loggedIn , logout} = useUserContext();
+
+    const [currentUser, setCurrentUser] = useState(
+        JSON.parse(sessionStorage.getItem('user'))
+    );
+
+    const showLogInOption = () => {
+        if (loggedIn) {
+            return (
+                <>
+                 <li className='nav-item'>
+                    <button onClick={logout} className='btn btn-danger'>Log Out</button>
+
+                </li>
+                <li>
+                    <img width={40} height={100} className='ms-4 rounded-circle' src={"http://localhost:5000/" +currentUser.avatar} alt="" />
+                </li>
+                </>
+
+            );
+        } else {
+            return (
+                <>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/login">
+                            Login
+                        </NavLink>
+                    </li>
+                    <li className="nav-item">
+                        <NavLink className="nav-link" to="/signup">
+                            Signup
+                        </NavLink>
+                    </li>
+                </>
+
+            );
+        }
+    }
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-info">
             <div className="container-fluid">
@@ -26,16 +66,7 @@ const Navbar = () => {
                                 Home
                             </NavLink>
                         </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/login">
-                                Login
-                            </NavLink>
-                        </li>
-                        <li className="nav-item">
-                            <NavLink className="nav-link" to="/signup">
-                                Signup
-                            </NavLink>
-                        </li>
+
                         <li className="nav-item">
                             <NavLink className="nav-link" to="/event">
                                 Event Handling
@@ -71,38 +102,9 @@ const Navbar = () => {
                                 ManageUser
                             </NavLink>
                         </li>
-                        {/* <li className="nav-item dropdown">
-                            <a
-                                className="nav-link dropdown-toggle"
-                                href="#"
-                                id="navbarDropdown"
-                                role="button"
-                                data-bs-toggle="dropdown"
-                                aria-expanded="false"
-                            >
-                                Dropdown
-                            </a>
-                            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li>
-                                    <a className="dropdown-item" href="#">
-                                        Action
-                                    </a>
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="#">
-                                        Another action
-                                    </a>
-                                </li>
-                                <li>
-                                    <hr className="dropdown-divider" />
-                                </li>
-                                <li>
-                                    <a className="dropdown-item" href="#">
-                                        Something else here
-                                    </a>
-                                </li>
-                            </ul>
-                        </li> */}
+                         
+                         {showLogInOption()}
+
                     </ul>
                     <form className="d-flex" role='search'>
                         <input
