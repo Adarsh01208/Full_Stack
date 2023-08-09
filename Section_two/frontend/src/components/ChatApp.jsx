@@ -8,15 +8,15 @@ const ChatApp = () => {
     const addTodo = (e) => {
         // console.log(e.code);
         if (e.code === 'Enter') {
-           // console.log('Task Added');
+            // console.log('Task Added');
             let task = e.target.value;
             if (!task.trim()) return;
 
             e.target.value = "";
             setTodoList([...todolist, { task: task, completed: false }]);
-          //  console.log(todolist);
+            //  console.log(todolist);
         }
-        
+
     };
     const CompleteTodo = (index) => {
         const temp = todolist;
@@ -29,13 +29,13 @@ const ChatApp = () => {
         temp.splice(index, 1);
         setTodoList([...temp]);
     };
-     
+
     return (
         <div>
             <h1 className='text-center display-4 fw-bold my-5'>Chat App</h1>
             <div className='container'>
                 <div className="card">
-                    
+
                     <div className="card-body">
                         <ul className='list-group'>
                             {
