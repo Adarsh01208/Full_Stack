@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useFormik } from 'formik'
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
-import {useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 const signupSchema = Yup.object().shape({
   name: Yup.string()
@@ -21,7 +22,9 @@ const signupSchema = Yup.object().shape({
 
 const Signup = () => {
 
-  const navigate =useNavigate();
+  const navigate = useNavigate();
+
+  const [setImage, setsetImage] = useState('');
 
   const signupForm = useFormik(
     {
@@ -30,7 +33,8 @@ const Signup = () => {
         email: '',
         password: ''
       },
-      onSubmit: async (values) => {
+      onSubmit: async (values, action) => {
+        values.avatar = setImage;
         console.log(values);
 
         //sending request  to backend
@@ -42,6 +46,7 @@ const Signup = () => {
           }
         });
         console.log(res.status)
+        action.resetForm();
 
         if (res.status === 200) {
           Swal.fire({
@@ -64,18 +69,19 @@ const Signup = () => {
 
     });
 
-    const uploadFile = async(e) => {
-      let file = e.target.files[0];
+  const uploadFile = async (e) => {
+    let file = e.target.files[0];
+    setsetImage(file.name);
 
-      const fd = new FormData();
-      fd.append('myfile', file);
+    const fd = new FormData();
+    fd.append('myfile', file);
 
-      const res = await fetch ('http://localhost:5000/util/uploadfile',{
-        method: 'POST',
-        body: fd
-      });
-      console.log(res.status);
-    }
+    const res = await fetch('http://localhost:5000/util/uploadfile', {
+      method: 'POST',
+      body: fd
+    });
+    console.log(res.status);
+  }
 
   return (
     <div className="d-flex justify-content-center align-items-center  vh-100 ">
@@ -104,9 +110,15 @@ const Signup = () => {
               <label htmlFor="Upload File"></label>
               <input type="file" onChange={uploadFile} />
             </div>
-            <div>
-              <button type='submit' className="btn btn-danger w-100 mt-4 rounded-3 ">Submit</button>
+
+
+            <div className='d-flex flex-row justify-content-center mt-4'>
+              <input className='mb-4' type='checkbox' /> <span className='m-2'>I agree all statements in Terms of service</span>
             </div>
+            <div>
+              <button type='submit' className="btn btn-danger w-100 mt-4 rounded-3 ">Register</button>
+            </div>
+
           </form>
         </div>
       </div>

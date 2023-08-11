@@ -19,12 +19,12 @@ const Navbar = () => {
 
                 </li>
                 <li>
-                    <img width={40} height={100} className='ms-4 rounded-circle' src={"http://localhost:5000/" +currentUser.avatar} alt="" />
+                    <img width={60} height={50} className='ms-2 rounded-circle' src={"http://localhost:5000/" +currentUser.avatar} alt="" />
                 </li>
                 </>
-
             );
-        } else {
+        } 
+        else {
             return (
                 <>
                     <li className="nav-item">

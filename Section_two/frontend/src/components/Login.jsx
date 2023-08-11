@@ -2,6 +2,8 @@ import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import Swal from 'sweetalert2';
+import useUserContext from '../UserContext';
+import { useNavigate } from 'react-router-dom';
 
 
 const LoginSchema = Yup.object().shape({
@@ -14,6 +16,11 @@ const LoginSchema = Yup.object().shape({
 });
 
 const Login = () => {
+
+  const navigate = useNavigate();
+
+
+  const {setLoggedIn}  = useUserContext();
 
   //initialization formik
   const loginForm = useFormik(
@@ -40,10 +47,13 @@ const Login = () => {
             icon: 'success',
             title: 'Login Success',
 
-          });
+            
+
+          });    
 
           const data = await res.json();
           sessionStorage.setItem('user', JSON.stringify(data));
+          setLoggedIn(true);
 
         }
         else if (res.status === 401) {
