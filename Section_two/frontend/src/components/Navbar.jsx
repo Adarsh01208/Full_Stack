@@ -17,6 +17,7 @@ const Navbar = () => {
                  <li className='nav-item'>
                     <button onClick={logout} className='btn btn-danger'>Log Out</button>
 
+
                 </li>
                 <li>
                     <img width={60} height={50} className='ms-2 rounded-circle' src={"http://localhost:5000/" +currentUser.avatar} alt="" />
